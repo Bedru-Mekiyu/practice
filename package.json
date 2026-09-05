@@ -1,15 +1,24 @@
 {
-  "name": "practice",
+  "name": "role-based-access-control-api",
   "version": "1.0.0",
+  "description": "Role-Based Access Control (RBAC) REST API built with Express, MongoDB, and JSON Web Tokens (JWT)",
   "main": "src/index.js",
   "scripts": {
+    "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --check src/index.js && node --check src/controllers/authcontroller.js && node --check src/middlewares/authmiddleware.js && node --check src/middlewares/rolemiddleware.js && node --check src/models/usermodel.js && node --check src/routes/authRoutes.js && node --check src/routes/userRoutes.js"
   },
-  "keywords": [],
+  "keywords": [
+    "express",
+    "mongodb",
+    "mongoose",
+    "jwt",
+    "rbac",
+    "authentication",
+    "authorization"
+  ],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "dotenv": "^17.2.3",
